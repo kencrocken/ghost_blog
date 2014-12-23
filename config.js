@@ -17,7 +17,7 @@ config = {
                 service: 'Gmail',
                 auth: {
                     user: 'kcrocken@gmail.com',
-                    pass: 'G0ldf1sh'
+                    pass: ''
                 }
             }
         },
