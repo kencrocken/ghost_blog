@@ -337,18 +337,26 @@ var _              = require('lodash'),
 
             // ### grunt-sass
             // compile sass to css
-            sass: {
-                compress: {
-                    options: {
-                        outputStyle: 'nested', // TODO: Set back to 'compressed' working correctly with our dependencies
-                        sourceMap: true
-                    },
-                    files: [
-                        {dest: path.resolve('core/client/assets/css/<%= pkg.name %>.min.css'), src: path.resolve('core/client/assets/sass/screen.scss')},
-                        {dest: path.resolve('core/client/docs/dist/css/<%= pkg.name %>.min.css'), src: path.resolve('core/client/assets/sass/screen.scss')}
+            grunt.initConfig({
+              // ...
+              sass: {
+                dist: {
+                  files: [{
+                    expand: true,
+                    cwd: 'content/themes/casper/assets/sass',
+                    src: ['main.scss'],
+                    dest: 'content/themes/casper/assets/css/main',
+                    ext: '.css'
+                  }],
+
+                  options: {
+                    loadPath: [
+                      'bower_components/bourbon/dist',
+                      'bower_components/neat/app/assets/stylesheets'
                     ]
+                  }
                 }
-            },
+              },
 
             // ### grunt-autoprefixer
             // Autoprefix all the things, for the last 2 versions of major browsers
