@@ -1,26 +1,8 @@
-/* ==========================================================================
-   Table of Contents
-   ========================================================================== */
-/*
-
-    0.  Normalize
-    1.  Icons
-    2.  General
-    3.  Utilities
-    4.  General
-    5.  Single Post
-    6.  Tag Archive
-    7.  Third Party Elements
-    8.  Pagination
-    9.  Footer
-    10. Media Queries (Tablet)
-    11. Media Queries (Mobile)
-    12. Animations
-
-*/
+@charset "UTF-8";
 /* ==========================================================================
    0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
+@import url("http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Open+Sans:300italic,300|Roboto+Slab:700,400");
 article, aside, details,
 figcaption, figure,
 footer, header, hgroup,
@@ -183,6 +165,247 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
+/* Bitters 0.10.0
+ * http://bitters.bourbon.io
+ * Copyright 2013–2014 thoughtbot, inc.
+ * MIT License */
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #477dca;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none; }
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #2c5999;
+    color: white; }
+  button:disabled,
+  input[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif;
+  line-height: 1.25;
+  margin: 0;
+  text-rendering: optimizeLegibility; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #477dca;
+  text-decoration: none; }
+  a:hover {
+    color: #2c5999; }
+  a:active, a:focus {
+    color: #2c5999;
+    outline: none; }
+
+hr {
+  border-bottom: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+blockquote {
+  border-left: 2px solid #dddddd;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em; }
+
+cite {
+  color: #737373;
+  font-style: italic; }
+  cite:before {
+    content: "\2014 \00A0"; }
+
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #dddddd;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em; }
+
+input,
+label,
+select {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em; }
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em; }
+  label.required:after {
+    content: "*"; }
+  label abbr {
+    display: none; }
+
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%; }
+  textarea:hover,
+  input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+  select[multiple=multiple]:hover {
+    border-color: #c4c4c4; }
+  textarea:focus,
+  input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+  select[multiple=multiple]:focus {
+    border-color: #477dca;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+    outline: none; }
+
+textarea {
+  resize: vertical; }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%; }
+
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto; }
+
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left; }
+
+td {
+  border-bottom: 1px solid #dddddd;
+  padding: 0.75em 0; }
+
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+dl {
+  margin-bottom: 0.75em; }
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  dl dd {
+    margin: 0; }
+
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+/*
+
+    1.  Icons
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Tag Archive
+    7.  Third Party Elements
+    8.  Pagination
+    9.  Footer
+    10. Media Queries (Tablet)
+    11. Media Queries (Mobile)
+    12. Animations
+
+*/
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
@@ -241,111 +464,6 @@ html {
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
-html {
-  height: 100%;
-  max-height: 100%;
-  font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent; }
-
-body {
-  height: 100%;
-  max-height: 100%;
-  font-family: "Merriweather", serif;
-  letter-spacing: 0.01rem;
-  font-size: 1.8rem;
-  line-height: 1.75em;
-  color: #3A4145;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1; }
-
-::-moz-selection {
-  background: #D6EDFF; }
-
-::selection {
-  background: #D6EDFF; }
-
-h1, h2, h3,
-h4, h5, h6 {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  color: #2E2E2E;
-  line-height: 1.15em;
-  margin: 0 0 0.4em 0;
-  font-family: "Open Sans", sans-serif; }
-
-h1 {
-  font-size: 5rem;
-  letter-spacing: -2px;
-  text-indent: -3px; }
-
-h2 {
-  font-size: 3.6rem;
-  letter-spacing: -1px; }
-
-h3 {
-  font-size: 3rem; }
-
-h4 {
-  font-size: 2.5rem; }
-
-h5 {
-  font-size: 2rem; }
-
-h6 {
-  font-size: 2rem; }
-
-a {
-  color: #4A4A4A;
-  transition: color ease 0.3s; }
-
-a:hover {
-  color: #111; }
-
-p, ul, ol, dl {
-  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-  -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-  margin: 0 0 1.75em 0; }
-
-ol, ul {
-  padding-left: 3rem; }
-
-ol ol, ul ul,
-ul ol, ol ul {
-  margin: 0 0 0.4em 0;
-  padding-left: 2em; }
-
-dl dt {
-  float: left;
-  width: 180px;
-  overflow: hidden;
-  clear: left;
-  text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: 700;
-  margin-bottom: 1em; }
-
-dl dd {
-  margin-left: 200px;
-  margin-bottom: 1em; }
-
-li {
-  margin: 0.4em 0; }
-
-li li {
-  margin: 0; }
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: #EFEFEF 1px solid;
-  margin: 3.2em 0;
-  padding: 0; }
-
 blockquote {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -419,56 +537,6 @@ kbd {
   border-radius: 4px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset; }
 
-table {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.75em 0;
-  width: 100%;
-  max-width: 100%;
-  background-color: transparent; }
-
-table th,
-table td {
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  vertical-align: top;
-  border-top: #EFEFEF 1px solid; }
-
-table th {
-  color: #000; }
-
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-  border-top: 0; }
-
-table tbody + tbody {
-  border-top: #EFEFEF 2px solid; }
-
-table table table {
-  background-color: #FFF; }
-
-table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
-  background-color: #F6F6F6; }
-
-table.plain tbody > tr:nth-child(odd) > td,
-table.plain tbody > tr:nth-child(odd) > th {
-  background: transparent; }
-
-iframe, .fluid-width-video-wrapper {
-  display: block;
-  margin: 1.75em 0; }
-
-/* When a video is inside the fitvids wrapper, drop the
-margin on the iframe, cause it breaks stuff. */
-.fluid-width-video-wrapper iframe {
-  margin: 0; }
-
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
@@ -505,20 +573,143 @@ margin on the iframe, cause it breaks stuff. */
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
-/* Big cover image on the home page */
-.main-header {
+/* home page */
+header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
   position: relative;
-  display: table;
-  width: 100%;
+  max-width: 700px;
   height: 100%;
-  margin-bottom: 5rem;
-  text-align: center;
-  background: #222 no-repeat center center;
-  background-size: cover;
-  overflow: hidden; }
-
-.main-header .inner {
-  width: 80%; }
+  margin: 0 auto; }
+  header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  header .main-logo {
+    max-width: 100px;
+    height: 100px;
+    margin: 0 auto !important;
+    float: none !important;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    header .main-logo:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 960px) {
+      header .main-logo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%;
+        float: left !important;
+        margin: 0 0 !important; }
+        header .main-logo:last-child {
+          margin-right: 0; } }
+    header .main-logo img {
+      padding: 0;
+      width: 100px;
+      height: 100px; }
+  header .blog-title {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    header .blog-title:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 960px) {
+      header .blog-title {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        text-align: left; }
+        header .blog-title:last-child {
+          margin-right: 0; } }
+    header .blog-title h1 {
+      font-family: "Roboto Condensed", "Open Sans", sans-serif;
+      font-size: 48px;
+      font-weight: 100;
+      letter-spacing: -1.5px;
+      text-align: right;
+      padding: 15px;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      header .blog-title h1:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 960px) {
+        header .blog-title h1 {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 57.35098%; }
+          header .blog-title h1:last-child {
+            margin-right: 0; } }
+    header .blog-title .menu-toggle {
+      font-size: 35px;
+      padding-top: 27px;
+      color: darkgrey;
+      cursor: pointer;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 6.17215%; }
+      header .blog-title .menu-toggle:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 960px) {
+        header .blog-title .menu-toggle {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 6.17215%; }
+          header .blog-title .menu-toggle:last-child {
+            margin-right: 0; } }
+      header .blog-title .menu-toggle:hover {
+        color: #838383; }
+  header .menu {
+    display: none; }
+    header .menu table {
+      width: 100%;
+      margin-top: 15px;
+      background: #eee; }
+      header .menu table .menu-items td {
+        font-size: 21px;
+        padding: 20px;
+        border-right: 1px inset #fff;
+        background: #fef; }
+        header .menu table .menu-items td:last-child {
+          border: none; }
+      header .menu table .menu-social td {
+        font-size: 31px;
+        color: white;
+        border-right: 1px inset #fff;
+        background: rgba(59, 89, 152, 0.7); }
+        header .menu table .menu-social td:last-child {
+          border: none;
+          background: rgba(85, 172, 238, 0.7); }
+          header .menu table .menu-social td:last-child:hover {
+            background: #55acee; }
+        header .menu table .menu-social td:hover {
+          background: #3b5998; }
+        header .menu table .menu-social td p {
+          display: inline-block;
+          vertical-align: middle; }
+      header .menu table td {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        text-align: center;
+        border: none;
+        padding: 0; }
+        header .menu table td p {
+          font-size: 12px;
+          font-weight: 100; }
+  header .active {
+    display: block; }
 
 .main-nav {
   position: relative;
@@ -558,7 +749,6 @@ margin on the iframe, cause it breaks stuff. */
    on photos which happen to have a light background. */
 .home-template .main-header:after {
   display: block;
-  content: " ";
   width: 150px;
   height: 130px;
   border-radius: 100%;
@@ -590,7 +780,6 @@ margin on the iframe, cause it breaks stuff. */
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  height: 38px;
   padding: 1px 0 5px 0;
   width: auto; }
 
@@ -685,8 +874,8 @@ margin on the iframe, cause it breaks stuff. */
   font-size: 5rem;
   letter-spacing: -1px;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
-  color: #fff; }
+  font-family: "Roboto Slab", serif;
+  color: #333333; }
 
 .page-description {
   margin: 0;
@@ -731,7 +920,7 @@ margin on the iframe, cause it breaks stuff. */
   position: relative;
   width: 80%;
   max-width: 710px;
-  margin: 4rem auto;
+  margin: 2rem auto;
   padding-bottom: 4rem;
   border-bottom: #EBF2F6 1px solid;
   word-break: break-word;
@@ -756,7 +945,7 @@ margin on the iframe, cause it breaks stuff. */
   box-shadow: #FFF 0 0 0 5px; }
 
 body:not(.post-template) .post-title {
-  font-size: 3.6rem; }
+  font-size: 1.6rem; }
 
 .post-title a {
   text-decoration: none; }
@@ -773,7 +962,7 @@ body:not(.post-template) .post-title {
   display: block;
   margin: 1.75rem 0 0 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   line-height: 2.2rem;
   color: #9EABB3; }
 
@@ -782,6 +971,7 @@ body:not(.post-template) .post-title {
   height: 24px;
   float: left;
   margin-right: 9px;
+  margin-top: 6px;
   border-radius: 100%; }
 
 .post-meta a {
@@ -802,7 +992,7 @@ body:not(.post-template) .post-title {
   padding-left: 12px;
   border-left: #d5dbde 1px solid;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   white-space: nowrap; }
 
 .user-image {
@@ -1301,7 +1491,7 @@ body:not(.post-template) .post-title {
     font-size: 0.95em; }
 
   body:not(.post-template) .post-title {
-    font-size: 3.2rem; }
+    font-size: 1.6rem; }
 
   hr {
     margin: 2.4em 0; }
@@ -1616,3 +1806,5 @@ body:not(.post-template) .post-title {
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+.icon {
+  color: black; }

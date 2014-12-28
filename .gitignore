@@ -3,6 +3,8 @@ bower_components/
 content/data
 *.log
 .sass-cache
+config.js
 
+content/data
 build/
 dist/
